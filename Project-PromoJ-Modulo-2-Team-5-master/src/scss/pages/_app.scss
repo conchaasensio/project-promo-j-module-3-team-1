@@ -1,0 +1,34 @@
+.app__main {
+  // background-color: linear-gradient($color-neutral, $color-light);
+  background-image: url('../images/Background-prueba2.png');
+  /*@include tablet {
+    height: calc(100vh - 170px);
+  }*/
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 100%;
+    @include tablet {
+      padding: rem(20) rem(49);
+    }
+    @include desktop {
+      grid-template-columns: repeat(8, 1fr);
+    }
+    .app__preview,
+    .page__form {
+      grid-column: span 6;
+      @include tablet {
+        grid-column: span 3;
+      }
+    }
+    .app__preview {
+      @include tablet {
+        order: 2;
+        border-radius: rem(15);
+      }
+      @include desktop {
+        grid-column: span 5;
+      }
+    }
+  }
+}

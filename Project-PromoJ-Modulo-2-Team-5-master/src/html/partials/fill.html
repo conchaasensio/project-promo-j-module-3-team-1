@@ -1,0 +1,105 @@
+<div class="border border__top">
+  <h2 class="fill-title js-accordion-title">
+    <span><i class="far fa-keyboard"></i> rellena</span>
+    <i class="fab fa-pagelines js-accordion-icon"></i>
+  </h2>
+  <div class="form-container js-accordion-content">
+    <div class="form_control">
+      <label class="label" for="name"
+        >Nombre completo<i class="fas fa-asterisk" aria-hidden="true"></i
+      ></label>
+      <input
+        class="box js-inputName"
+        type="text"
+        id="name"
+        name="name"
+        maxlength="20"
+        placeholder="Ej: Jeanne Baret"
+        required
+      />
+      <small class="js-error-message">Introduce un nombre válido</small>
+    </div>
+    <div class="form_control">
+      <label class="label" for="job"
+        >Puesto<i class="fas fa-asterisk" aria-hidden="true"></i
+      ></label>
+      <input
+        class="box js-inputJob"
+        type="text"
+        id="job"
+        name="job"
+        maxlength="20"
+        placeholder="Ej: Botánica"
+        required
+      />
+      <small class="js-error-message">Introduce una profesión válida</small>
+    </div>
+    <div class="form_control">
+      <label class="label" for="image"
+        >Imagen de perfil<i class="fas fa-asterisk" aria-hidden="true"></i
+      ></label>
+      <button class="button js__profile-trigger" type="button">
+        Añadir imagen
+      </button>
+      <input
+        type="file"
+        name=""
+        id="img-selector"
+        class="action__hiddenField js__profile-upload-btn"
+      />
+      <div class="profile__preview js__profile-preview"></div>
+
+      <label class="label" for="email"
+        >Email<i class="fas fa-asterisk" aria-hidden="true"></i
+      ></label>
+      <input
+        class="box js-inputEmail"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Ej: jeanne-baret@gmail.com"
+        required
+      />
+      <small class="js-error-message">Introduce un email válido</small>
+    </div>
+    <div class="form_control">
+      <label class="label" for="phone">Teléfono</label>
+      <input
+        class="box js-inputPhone"
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Ej: 915327899"
+      />
+      <small class="js-error-message">Introduce un teléfono válido</small>
+    </div>
+    <div class="form_control">
+      <label class="label" for="linkedin"
+        >Linkedin<i class="fas fa-asterisk" aria-hidden="true"></i
+      ></label>
+      <input
+        class="box js-inputLinkedin"
+        type="text"
+        id="linkedin"
+        name="linkedin"
+        placeholder="Ej: JeanneBaret"
+        required
+      />
+      <small class="js-error-message">Introduce tu nombre de Linkedin</small>
+    </div>
+    <div class="form_control">
+      <label class="label" for="github"
+        >Github<i class="fas fa-asterisk" aria-hidden="true"></i
+      ></label>
+      <input
+        class="box js-inputGithub"
+        type="text"
+        id="github"
+        name="github"
+        placeholder="Ej: JeanneBaret"
+        required
+      />
+      <small class="js-error-message">Introduce tu nombre de Github</small>
+    </div>
+  </div>
+</div>

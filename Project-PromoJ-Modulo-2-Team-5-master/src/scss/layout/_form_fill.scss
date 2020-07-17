@@ -1,0 +1,103 @@
+.form__fill {
+  display: flex;
+  flex-direction: column;
+  color: $color-secondary;
+  font-family: $font-main;
+
+  .fill-title {
+    text-transform: uppercase;
+    color: $color-medium-dark;
+    font-size: rem(18);
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem(25);
+    margin-bottom: rem(25);
+    cursor: pointer;
+
+    .fa-chevron-down {
+      color: $color-medium-dark;
+      font-size: rem(18);
+    }
+  }
+
+  .box {
+    border: 1px solid $color-quaternary;
+    margin-bottom: rem(20);
+    margin-top: rem(7);
+    width: 100%;
+    height: rem(30);
+    font-family: $font-main;
+    font-size: rem(14);
+    padding-left: rem(10);
+  }
+
+  .js-border-input {
+    border: rem(1) solid red;
+  }
+
+  .js-error-message {
+    color: red;
+    display: none;
+    padding-bottom: rem(11);
+  }
+
+  .js-error {
+    .js-error-message {
+      display: block;
+    }
+  }
+
+  .label {
+    font-size: rem(14);
+    display: block;
+  }
+
+  .button {
+    background-color: $color-main;
+    color: $color-light;
+    font-size: rem(14);
+    width: rem(140);
+    height: rem(30);
+    border-radius: rem(3);
+    border: none;
+    font-family: $font-main;
+    margin-bottom: rem(20);
+    box-shadow: 0 0 rem(4) 0 rgba(0, 0, 0, 0.32);
+    margin-top: rem(7);
+  }
+  .button:active {
+    transform: translateY(rem(2));
+  }
+  .fa-asterisk {
+    font-weight: 900;
+    font-size: rem(8);
+    transform: translate(0, -70%);
+  }
+  .fa,
+  .far,
+  .fas {
+    font-family: 'Font Awesome 5 Free';
+    color: $color-main;
+  }
+}
+
+.action__hiddenField {
+  /* Ocultamos el input de tipo "file" porque no podemos 
+    darle los estilos que queremos */
+  display: none;
+}
+
+.profile__preview {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+  width: rem(30);
+  height: rem(30);
+  margin-left: rem(15);
+  display: inline-block;
+  position: relative;
+  top: rem(10);
+}

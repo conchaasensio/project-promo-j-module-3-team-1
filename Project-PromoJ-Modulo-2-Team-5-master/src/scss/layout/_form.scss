@@ -1,0 +1,127 @@
+@import 'layout/_form_design.scss';
+@import 'layout/_form_fill.scss';
+
+.border {
+  border-bottom: 2px solid $color-medium;
+}
+
+.border__top {
+  border-top: 2px solid $color-medium;
+}
+
+.form__share__title {
+  text-transform: uppercase;
+  color: $color-medium-dark;
+  font-size: rem(18);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  .fa-share-alt {
+    color: $color-main;
+    margin-right: rem(10);
+  }
+  .fa-chevron-down {
+    color: $color-medium-dark;
+  }
+}
+
+.form__share__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  align-self: center;
+
+  .form__share__submit {
+    margin-bottom: rem(30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(199);
+    height: rem(50);
+    background-color: $color-main;
+    border-radius: 12px;
+    border-color: $color-main;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    font-family: $font-main;
+    font-size: $font-medium;
+    color: $color-light;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      background: rgba(255, 115, 52, 0.8);
+    }
+
+    &:disabled {
+      background-color: #d5d5d5;
+      border-color: #d5d5d5;
+      box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    }
+    i {
+      margin-right: rem(12);
+    }
+  }
+}
+
+.form__share__text--error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/preview2.png');
+  border-radius: rem(20);
+  width: 100%;
+  padding: rem(20);
+
+  & p {
+    color: $palette-warm-c;
+    text-align: center;
+    font-weight: 600;
+    line-height: rem(25);
+
+    & span {
+      display: block;
+      color: $color-dark;
+    }
+  }
+}
+
+.js-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transform: scaleY(0);
+}
+
+.js-accordion-content-open {
+  max-height: 100%;
+  transition: transform 0.3s ease-out;
+  transform: scaleY(1);
+}
+
+.twitter--link {
+  color: white;
+}
+
+.twitter--button {
+  margin-top: 20px;
+  height: 50px;
+  background-color: #1a91da;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  align-self: center;
+  border-radius: 12px;
+  font-size: rem(18);
+}
+
+.js-hidden {
+  display: none;
+}

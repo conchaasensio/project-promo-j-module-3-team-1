@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create your Botanical profile card</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/c75582e3c5.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./assets/images/favicon.png" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <h1>
+          <a href="./index.html" tittle="Go to landing page"><img class=" bigEntrance"
+              src="./assets/images/logopagina.png" /></a>
+        </h1>
+      </div>
+    </header>
+    <main class="app__main">
+      <div class="wrapper">
+        <section class="app__preview">
+          <div class="button-container">
+            <button class="button__reset">
+              <i class="far fa-trash-alt"></i
+              ><span class="button__reset--text">reset</span>
+            </button>
+          </div>
+          <div class="app__preview--card">
+            <div class="top-block">
+              <div class="name_job js-border border-cold">
+                <h3 class="full_name js-name name-cold">Jeanne Baret</h3>
+                <h4 class="job js-jobPreview">Botánica</h4>
+              </div>
+            </div>
+            <div class="photo js-photo js-photo-default js__profile-image">
+              <div class="js-frame js-frame-cold js-frame-hidden"></div>
+            </div>
+
+            <ul class="social_media js-icon icon-cold">
+              <a
+                class="js-emailPreview"
+                href="mailto:"
+                target="_blank"
+                title="email address"
+                ><li class="email">
+                  <i class="far fa-envelope"></i></li
+              ></a>
+
+              <a
+                class="js-phonePreview"
+                href="tel:"
+                target="_blank"
+                title="phone number"
+                ><li class="phone"><i class="fas fa-mobile-alt"></i></li
+              ></a>
+
+              <a
+                class="js-linkedinPreview"
+                href="https:/www.linkedin.com/in/"
+                target="_blank"
+                title="linkedin profile"
+                ><li class="linkedin">
+                  <i class="fab fa-linkedin-in"></i></li
+              ></a>
+
+              <a
+                class="js-githubPreview"
+                href="https:/www.github.com/"
+                target="_blank"
+                title="github profile"
+                ><li class="github">
+                  <i class="fab fa-github-alt"></i></li
+              ></a>
+            </ul>
+          </div>
+        </section>
+
+        <section class="page__form">
+          <form action="/signup" method="post" class="js-form">
+            <fieldset class="form__design">
+              <h2 class="form__design__title js-accordion-title js-accordion-title-active">
+                <span><i class="far fa-object-ungroup"></i>Diseña</span><i class="fab fa-pagelines js-accordion-icon fa-rotate-180"></i>
+              </h2>
+              <div class="js-accordion-content js-accordion-content-open">
+                <div class="design__container">
+                  <div class="design__container__colors">
+                    <h3>Colores</h3>
+                  </div>
+                  <div class="text-options-container">
+                    <ul class="text-options">
+                      <li>
+                        <small>Gingko</small>
+                      </li>
+                      <li class="flower-option">
+                        <small>Amapola</small>
+                      </li>
+                      <li>
+                        <small>Girasol</small>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="design__container__options">
+                    <label for="cold" class="cold">
+                      <input type="radio" id="cold" class="js-palette" name="palette" value="1" checked />
+                      <div class="palette-cold">
+                        <span class="a"></span>
+                        <span class="b"></span>
+                        <span class="c"></span>
+                      </div>
+                    </label>
+                    <label for="warm" class="warm">
+                      <input id="warm" type="radio" class="js-palette" name="palette" value="2" />
+                      <div class="palette-warm">
+                        <span class="a"></span>
+                        <span class="b"></span>
+                        <span class="c"></span>
+                      </div>
+                    </label>
+                    <label for="medium" class="medium">
+                      <input id="medium" type="radio" class="js-palette" name="palette" value="3" />
+                      <div class="palette-medium">
+                        <span class="a"></span>
+                        <span class="b"></span>
+                        <span class="c"></span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="design__container__frame">
+                  <h3>Marco</h3>
+
+                  <div href="#" class="design__container__button js-frame-button js-frame-button-off">
+                    <div class="design__container__button__round"></div>
+                  </div>
+                </div>
+              </div>
+
+            </fieldset>
+            <fieldset class="form__fill js-form__fill">
+              <div class="border border__top">
+                <h2 class="fill-title js-accordion-title">
+                  <span><i class="far fa-keyboard"></i> rellena</span>
+                  <i class="fab fa-pagelines js-accordion-icon"></i>
+                </h2>
+                <div class="form-container js-accordion-content">
+                  <div class="form_control">
+                    <label class="label" for="name"
+                      >Nombre completo<i class="fas fa-asterisk" aria-hidden="true"></i
+                    ></label>
+                    <input
+                      class="box js-inputName"
+                      type="text"
+                      id="name"
+                      name="name"
+                      maxlength="20"
+                      placeholder="Ej: Jeanne Baret"
+                      required
+                    />
+                    <small class="js-error-message">Introduce un nombre válido</small>
+                  </div>
+                  <div class="form_control">
+                    <label class="label" for="job"
+                      >Puesto<i class="fas fa-asterisk" aria-hidden="true"></i
+                    ></label>
+                    <input
+                      class="box js-inputJob"
+                      type="text"
+                      id="job"
+                      name="job"
+                      maxlength="20"
+                      placeholder="Ej: Botánica"
+                      required
+                    />
+                    <small class="js-error-message">Introduce una profesión válida</small>
+                  </div>
+                  <div class="form_control">
+                    <label class="label" for="image"
+                      >Imagen de perfil<i class="fas fa-asterisk" aria-hidden="true"></i
+                    ></label>
+                    <button class="button js__profile-trigger" type="button">
+                      Añadir imagen
+                    </button>
+                    <input
+                      type="file"
+                      name=""
+                      id="img-selector"
+                      class="action__hiddenField js__profile-upload-btn"
+                    />
+                    <div class="profile__preview js__profile-preview"></div>
+
+                    <label class="label" for="email"
+                      >Email<i class="fas fa-asterisk" aria-hidden="true"></i
+                    ></label>
+                    <input
+                      class="box js-inputEmail"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Ej: jeanne-baret@gmail.com"
+                      required
+                    />
+                    <small class="js-error-message">Introduce un email válido</small>
+                  </div>
+                  <div class="form_control">
+                    <label class="label" for="phone">Teléfono</label>
+                    <input
+                      class="box js-inputPhone"
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="Ej: 915327899"
+                    />
+                    <small class="js-error-message">Introduce un teléfono válido</small>
+                  </div>
+                  <div class="form_control">
+                    <label class="label" for="linkedin"
+                      >Linkedin<i class="fas fa-asterisk" aria-hidden="true"></i
+                    ></label>
+                    <input
+                      class="box js-inputLinkedin"
+                      type="text"
+                      id="linkedin"
+                      name="linkedin"
+                      placeholder="Ej: JeanneBaret"
+                      required
+                    />
+                    <small class="js-error-message">Introduce tu nombre de Linkedin</small>
+                  </div>
+                  <div class="form_control">
+                    <label class="label" for="github"
+                      >Github<i class="fas fa-asterisk" aria-hidden="true"></i
+                    ></label>
+                    <input
+                      class="box js-inputGithub"
+                      type="text"
+                      id="github"
+                      name="github"
+                      placeholder="Ej: JeanneBaret"
+                      required
+                    />
+                    <small class="js-error-message">Introduce tu nombre de Github</small>
+                  </div>
+                </div>
+              </div>
+
+            </fieldset>
+
+            <fieldset class="form__share">
+              <h2 class="form__share__title js-accordion-title">
+                <span><i class="fas fa-share-alt"></i>Comparte</span>
+                <i class="fab fa-pagelines js-accordion-icon"></i>
+              </h2>
+              <div class="form__share__button js-accordion-content">
+                <button class="form__share__submit border js-button-share" type="submit" value="Crear tarjeta" disabled>
+                  <i class="far fa-address-card"></i>Crear tarjeta
+                </button>
+                <div class="form__share__text--error">
+                  <p class="form__share__text__p">
+                    ¡La tarjeta todavía no está lista para ser compartida!
+                    <span>Por favor, revisa los campos rellenos más arriba 🌱 </span>
+                  </p>
+                </div>
+                <div class="twitterdiv twitter--button js-hidden">
+                  <a href=" " class="twitter--link " data-hashtags="#Adalab #promoJamison #Adalabers" target="_blank title="
+                    Compartir en twitter"><i class="fab fa-twitter"></i> Compartir en
+                    Twitter</a>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class=" wrapper">
+        <div class="footer__copy">
+          <img src="./assets/images/livecodeteam.png" />
+        </div>
+        <a class="footer__logo" href="https://adalab.es/"><img src="./assets/images/logo-adalab.png" /></a>
+      </div>
+
+
+    </footer>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<section class="page__form">
+  <form action="/signup" method="post" class="js-form">
+    <fieldset class="form__design">
+      <include src="./design.html"></include>
+    </fieldset>
+    <fieldset class="form__fill js-form__fill">
+      <include src="./fill.html"></include>
+    </fieldset>
+
+    <fieldset class="form__share">
+      <h2 class="form__share__title js-accordion-title">
+        <span><i class="fas fa-share-alt"></i>Comparte</span>
+        <i class="fab fa-pagelines js-accordion-icon"></i>
+      </h2>
+      <div class="form__share__button js-accordion-content">
+        <button class="form__share__submit border js-button-share" type="submit" value="Crear tarjeta" disabled>
+          <i class="far fa-address-card"></i>Crear tarjeta
+        </button>
+        <div class="form__share__text--error">
+          <p class="form__share__text__p">
+            ¡La tarjeta todavía no está lista para ser compartida!
+            <span>Por favor, revisa los campos rellenos más arriba 🌱 </span>
+          </p>
+        </div>
+        <div class="twitterdiv twitter--button js-hidden">
+          <a href=" " class="twitter--link " data-hashtags="#Adalab #promoJamison #Adalabers" target="_blank title="
+            Compartir en twitter"><i class="fab fa-twitter"></i> Compartir en
+            Twitter</a>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</section>
