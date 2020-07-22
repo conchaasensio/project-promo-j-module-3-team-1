@@ -1,8 +1,8 @@
-@import 'functions.scss';
-@import 'mixins.scss';
+@import '../common/functions';
+@import '../common/mixins';
 
 .app__preview {
-  background-image: url('../images/preview2.png');
+  background-image: url('../../images/preview2.png');
   padding: rem(40) 0;
   @include tablet {
     padding: rem(175) 0;
@@ -155,32 +155,32 @@
   }
 
   &-cold {
-    background-image: url('../images/transparency_cold.png');
+    background-image: url('../../images/transparency_cold.png');
   }
   &-warm {
-    background-image: url('../images/transparency_warm.png');
+    background-image: url('../../images/transparency_warm.png');
     transform: scale(-1, 1);
   }
   &-medium {
-    background-image: url('../images/transparency_medium.png');
+    background-image: url('../../images/transparency_medium.png');
     transform: rotate(deg) scale(-1, 1);
   }
 }
 
 .js-photo-default {
-  background-image: url('../images/lila2.png');
+  background-image: url('../../images/lila2.png');
 }
 
 .photo-warm {
-  background-image: url('../images/Amapola.png');
+  background-image: url('../../images/Amapola.png');
 }
 
 .photo-cold {
-  background-image: url('../images/Ginkgo.png');
+  background-image: url('../../images/Ginkgo.png');
 }
 
 .photo-medium {
-  background-image: url('../images/Girasol.png');
+  background-image: url('../../images/Girasol.png');
 }
 
 .js-icon-deactivated {

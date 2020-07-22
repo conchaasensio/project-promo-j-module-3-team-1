@@ -1,5 +1,5 @@
-@import 'functions.scss';
-@import 'mixins.scss';
+@import '../common/functions';
+@import '../common/mixins';
 
 .form__fill {
   display: flex;

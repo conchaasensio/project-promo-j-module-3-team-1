@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 //import '../stylesheets/App.scss';
-import '../stylesheets/_header.scss';
-import LogoPagina from '../images/logopagina.png';
+import "../stylesheets/footer-header/_header.scss";
+import LogoPagina from "../images/logopagina.png";
 
 const Header = (props) => {
   return (

@@ -1,7 +1,7 @@
-@import 'form_design.scss';
-@import 'form_fill.scss';
-@import 'functions.scss';
-@import 'mixins.scss';
+@import './form_design';
+@import './form_fill';
+@import '../common/functions';
+@import '../common/mixins';
 
 .border {
   border-bottom: 2px solid $color-medium;
@@ -76,7 +76,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('../images/preview2.png');
+  background-image: url('../../images/preview2.png');
   border-radius: rem(20);
   width: 100%;
   padding: rem(20);

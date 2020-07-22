@@ -1,6 +1,6 @@
-import React from 'react';
-import '../stylesheets/_main.scss';
-import LogoPagina from '../images/logopagina.png';
+import React from "react";
+import "../stylesheets/landing/_main.scss";
+import LogoPagina from "../images/logopagina.png";
 
 const Main = (props) => {
   return (
