@@ -1,0 +1,11 @@
+@import 'functions.scss';
+
+html {
+  font-size: $font-regular;
+  font-family: $font-main;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: auto;
+}

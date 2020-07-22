@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/App.scss';
+//import '../stylesheets/App.scss';
 import '../stylesheets/_header.scss';
 import LogoPagina from '../images/logopagina.png';
 

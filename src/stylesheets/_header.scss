@@ -1,3 +1,5 @@
+@import 'functions.scss';
+
 .header {
   .wrapper {
     padding-left: rem(40);
@@ -6,8 +8,9 @@
   }
 
   h1 {
+    font-size: $font-regular;
     width: rem(201);
-    height: rem(51);
+    height: rem(20);
     img {
       width: 100%;
     }

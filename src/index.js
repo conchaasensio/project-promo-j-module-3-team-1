@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './stylesheets/App.scss';
-import App from './components/App';
+import App from './components/Card';
 
 ReactDOM.render(
   <React.StrictMode>
