@@ -4,7 +4,7 @@ import Collapsable from "./Collapsable";
 const Share = (props) => {
   return (
     <fieldset className="form__share">
-      <Collapsable title="Comparte" />
+      <Collapsable title="Comparte" icon="fas fa-share-alt" />
       <div className="form__share__button js-accordion-content">
         <button
           className="form__share__submit border js-button-share"

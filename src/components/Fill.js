@@ -5,7 +5,7 @@ const Fill = (props) => {
   return (
     <fieldset class="form__fill js-form__fill">
       <div className="border border__top">
-        <Collapsable title="Rellena" />
+        <Collapsable title="Rellena" icon="far fa-keyboard" />
         <div className="form-container js-accordion-content">
           <div className="form_control">
             <label className="label" for="name">
