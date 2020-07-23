@@ -2,94 +2,13 @@ import React from "react";
 import "../stylesheets/form/_form.scss";
 import "../stylesheets/preview/_preview.scss";
 import "../stylesheets/common/_page.scss";
+import Design from "./Design";
 
 const Form = (props) => {
   return (
     <section class="page__form">
       <form action="/signup" method="post" class="js-form">
-        <fieldset class="form__design">
-          <h2 className="form__design__title js-accordion-title js-accordion-title-active">
-            <span>
-              <i className="far fa-object-ungroup"></i>Diseña
-            </span>
-            <i className="fab fa-pagelines js-accordion-icon fa-rotate-180"></i>
-          </h2>
-          <div className="js-accordion-content js-accordion-content-open">
-            <div className="design__container">
-              <div className="design__container__colors">
-                <h3>Colores</h3>
-              </div>
-              <div className="text-options-container">
-                <ul className="text-options">
-                  <li>
-                    <small>Gingko</small>
-                  </li>
-                  <li className="flower-option">
-                    <small>Amapola</small>
-                  </li>
-                  <li>
-                    <small>Girasol</small>
-                  </li>
-                </ul>
-              </div>
-              <div className="design__container__options">
-                <label for="cold" className="cold">
-                  <input
-                    type="radio"
-                    id="cold"
-                    className="js-palette"
-                    name="palette"
-                    value="1"
-                    checked
-                  />
-                  <div className="palette-cold">
-                    <span className="a"></span>
-                    <span className="b"></span>
-                    <span className="c"></span>
-                  </div>
-                </label>
-                <label for="warm" className="warm">
-                  <input
-                    id="warm"
-                    type="radio"
-                    className="js-palette"
-                    name="palette"
-                    value="2"
-                  />
-                  <div className="palette-warm">
-                    <span className="a"></span>
-                    <span className="b"></span>
-                    <span className="c"></span>
-                  </div>
-                </label>
-                <label for="medium" className="medium">
-                  <input
-                    id="medium"
-                    type="radio"
-                    className="js-palette"
-                    name="palette"
-                    value="3"
-                  />
-                  <div className="palette-medium">
-                    <span className="a"></span>
-                    <span className="b"></span>
-                    <span className="c"></span>
-                  </div>
-                </label>
-              </div>
-            </div>
-            <div className="design__container__frame">
-              <h3>Marco</h3>
-              <div
-                href="#"
-                className="design__container__button js-frame-button js-frame-button-off"
-              >
-                <div className="design__container__button__round"></div>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-
+        <Design />
         <fieldset class="form__fill js-form__fill">
           <div className="border border__top">
             <h2 className="fill-title js-accordion-title">
