@@ -1,14 +1,10 @@
 import React from "react";
+import Collapsable from "./Collapsable";
 
 const Design = (props) => {
   return (
     <fieldset class="form__design">
-      <h2 className="form__design__title js-accordion-title js-accordion-title-active">
-        <span>
-          <i className="far fa-object-ungroup"></i>Diseña
-        </span>
-        <i className="fab fa-pagelines js-accordion-icon fa-rotate-180"></i>
-      </h2>
+      <Collapsable title="Diseña" />
       <div className="js-accordion-content js-accordion-content-open">
         <div className="design__container">
           <div className="design__container__colors">
