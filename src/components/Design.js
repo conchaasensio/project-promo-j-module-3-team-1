@@ -4,7 +4,11 @@ import Collapsable from "./Collapsable";
 const Design = (props) => {
   return (
     <fieldset class="form__design">
-      <Collapsable title="Diseña" icon="far fa-object-ungroup" />
+      <Collapsable
+        classh2="form__design__title"
+        title="Diseña"
+        icon="far fa-object-ungroup"
+      />
       <div className="js-accordion-content js-accordion-content-open">
         <div className="design__container">
           <div className="design__container__colors">

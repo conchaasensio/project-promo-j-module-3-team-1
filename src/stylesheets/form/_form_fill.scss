@@ -18,7 +18,10 @@
     margin-top: rem(25);
     margin-bottom: rem(25);
     cursor: pointer;
-
+    .fa-keyboard {
+      color: $color-main;
+      margin-right: rem(10);
+    }
     .fa-chevron-down {
       color: $color-medium-dark;
       font-size: rem(18);

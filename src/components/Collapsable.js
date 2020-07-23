@@ -5,10 +5,11 @@ class Collapsable extends React.Component {
     super(props);
     this.title = this.props.title;
     this.icon = this.props.icon;
+    this.classh2 = this.props.classh2;
   }
   render() {
     return (
-      <h2 className="form__design__title js-accordion-title js-accordion-title-active">
+      <h2 className={this.props.classh2}>
         <span>
           <i className={this.props.icon}></i>
           {this.props.title}
