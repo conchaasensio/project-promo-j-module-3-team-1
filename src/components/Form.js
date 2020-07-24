@@ -8,8 +8,8 @@ import Share from "./Share";
 
 const Form = (props) => {
   return (
-    <section class="page__form">
-      <form action="/signup" method="post" class="js-form">
+    <section className="page__form">
+      <form action="/signup" method="post" className="js-form">
         <Design />
         <Fill />
         <Share />
