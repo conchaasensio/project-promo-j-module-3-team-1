@@ -1,15 +1,18 @@
 import React from "react";
 import Collapsable from "./Collapsable";
+import "../stylesheets/form/_form.scss";
+import "../stylesheets/preview/_preview.scss";
+import "../stylesheets/common/_page.scss";
 
 const Share = (props) => {
   return (
     <fieldset className="form__share">
       <Collapsable
-        classh2="form__share__title"
+        classtitle="form__share__title"
         title="Comparte"
         icon="fas fa-share-alt"
-      />
-      <div className="form__share__button js-accordion-content">
+        classcontainer="form__share__button"
+      >
         <button
           className="form__share__submit border js-button-share"
           type="submit"
@@ -37,7 +40,7 @@ const Share = (props) => {
             <i className="fab fa-twitter"></i> Compartir en Twitter
           </a>
         </div>
-      </div>
+      </Collapsable>
     </fieldset>
   );
 };
