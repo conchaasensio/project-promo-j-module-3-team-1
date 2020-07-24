@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import Form from "./Form";
-import Footer from "./Footer";
-import Preview from "./Preview";
+import Header from "./header-footer/Header";
+import Form from "../components/form/Form";
+import Footer from "./header-footer/Footer";
+import Preview from "./preview/Preview";
 import "../stylesheets/common/_app.scss";
 
 function App() {

@@ -1,6 +1,6 @@
 import React from "react";
-import LogoAdalab from "../images/logo-adalab.png";
-import LiveCodeTeam from "../images/livecodeteam.png";
+import LogoAdalab from "../../images/logo-adalab.png";
+import LiveCodeTeam from "../../images/livecodeteam.png";
 
 const Footer = (props) => {
   return (

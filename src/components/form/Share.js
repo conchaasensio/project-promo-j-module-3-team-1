@@ -1,8 +1,8 @@
 import React from "react";
 import Collapsable from "./Collapsable";
-import "../stylesheets/form/_form.scss";
-import "../stylesheets/preview/_preview.scss";
-import "../stylesheets/common/_page.scss";
+import "../../stylesheets/form/_form.scss";
+import "../../stylesheets/preview/_preview.scss";
+import "../../stylesheets/common/_page.scss";
 
 const Share = (props) => {
   return (
