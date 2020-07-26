@@ -6,16 +6,13 @@ import '../../stylesheets/preview/_image_preview.scss';
 // import Design from "./Design";
 // import Fill from "./Fill";
 // import Share from "./Share";
-// import ButtonReset from './Reset';
+import ButtonReset from './Reset';
 
 const Preview = (props) => {
   return (
     <section className="app__preview">
       <div className="button-container">
-        <button className="button__reset">
-          <i className="far fa-trash-alt"></i>
-          <span className="button__reset--text">reset</span>
-        </button>
+        <ButtonReset />
       </div>
       <div className="app__preview--card">
         <div className="top-block">

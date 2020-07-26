@@ -9,4 +9,4 @@ function ButtonReset() {
   );
 }
 
-export defatult ButtonReset;
+export default ButtonReset;
