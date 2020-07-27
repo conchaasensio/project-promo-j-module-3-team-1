@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./header-footer/Header";
-import Form from "../components/form/Form";
+import Form from "./form/Form";
 import Footer from "./header-footer/Footer";
 import Preview from "./preview/Preview";
 import "../stylesheets/common/_app.scss";

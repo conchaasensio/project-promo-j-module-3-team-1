@@ -1,27 +1,27 @@
-'use strict';
+"use strict";
 
 function query(element) {
   return document.querySelector(element);
 }
 
 let formData = {
-  palette: '',
-  name: '',
-  job: '',
-  phone: '',
-  email: '',
-  linkedin: '',
-  github: '',
-  photo: '',
+  palette: "",
+  name: "",
+  job: "",
+  phone: "",
+  email: "",
+  linkedin: "",
+  github: "",
+  photo: "",
 };
 
-const fr = new FileReader();
-const uploadBtn = query('.js__profile-trigger');
-const fileField = query('.js__profile-upload-btn');
-const profileImage = query('.js__profile-image');
-const profilePreview = query('.js__profile-preview');
+//const fr = new FileReader();
+//const uploadBtn = query(".js__profile-trigger");
+//const fileField = query('.js__profile-upload-btn');
+const profileImage = query(".js__profile-image");
+const profilePreview = query(".js__profile-preview");
 
-const localImage = localStorage.getItem('photo');
+const localImage = localStorage.getItem("photo");
 
 if (localImage) {
   profileImage.style.backgroundImage = `url(${localImage})`;
@@ -37,16 +37,18 @@ if (localImage) {
  * al tener los datos listos
  * @param {evento} e
  */
-function getImage(e) {
-  const myFile = e.currentTarget.files[0];
-  fr.addEventListener('load', writeImage);
-  fr.readAsDataURL(myFile);
-}
+// function getImage(e) {
+//   const myFile = e.currentTarget.files[0];
+//   fr.addEventListener('load', writeImage);
+//   fr.readAsDataURL(myFile);
+// }
 
 /**
  * Una vez tenemos los datos listos en el FR podemos
  * trabajar con ellos ;)
  */
+
+//NOS QUEDA TERMINAR DE HACER ESTA FUNCION - SANDRA
 function writeImage() {
   /* En la propiedad `result` de nuestro FR se almacena
    * el resultado. Ese resultado de procesar el fichero que hemos cargado
@@ -56,21 +58,21 @@ function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
   formData.photo = fr.result;
-  localStorage.setItem('photo', formData.photo);
+  localStorage.setItem("photo", formData.photo);
 }
 
 /**
  * Genera un click automático en nuesto campo de tipo "file"
  * que está oculto
  */
-function fakeFileClick() {
-  fileField.click();
-}
+// function fakeFileClick() {
+//   fileField.click();
+// }
 
 /**
  * Añadimos los listeners necesarios:
  * - al botón visible para generar el click automático
  * - al campo oculto para cuando cambie su value
  */
-uploadBtn.addEventListener('click', fakeFileClick);
-fileField.addEventListener('change', getImage);
+uploadBtn.addEventListener("click", fakeFileClick);
+fileField.addEventListener("change", getImage);

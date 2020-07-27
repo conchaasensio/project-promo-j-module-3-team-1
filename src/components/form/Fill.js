@@ -1,5 +1,7 @@
 import React from "react";
 import Collapsable from "./Collapsable";
+import ImageComponent from "./ImageComponent";
+import InputComponent from "./InputComponent";
 
 const Fill = (props) => {
   return (
@@ -11,122 +13,79 @@ const Fill = (props) => {
           icon="far fa-keyboard"
           classcontainer="form-container"
         >
-          <div className="form_control">
-            <label className="label" htmlFor="name">
-              Nombre completo
-              <i className="fas fa-asterisk" aria-hidden="true"></i>
-            </label>
-            <input
-              className="box js-inputName"
-              type="text"
-              id="name"
-              name="name"
-              maxLength="20"
-              placeholder="Ej: Jeanne Baret"
-              required
-            />
-            <small className="js-error-message">
-              Introduce un nombre válido
-            </small>
-          </div>
-          <div className="form_control">
-            <label className="label" htmlFor="job">
-              Puesto<i className="fas fa-asterisk" aria-hidden="true"></i>
-            </label>
-            <input
-              className="box js-inputJob"
-              type="text"
-              id="job"
-              name="job"
-              maxLength="20"
-              placeholder="Ej: Botánica"
-              required
-            />
-            <small className="js-error-message">
-              Introduce una profesión válida
-            </small>
-          </div>
-          <div className="form_control">
-            <label className="label" htmlFor="image">
-              Imagen de perfil
-              <i className="fas fa-asterisk" aria-hidden="true"></i>
-            </label>
-            <button className="button js__profile-trigger" type="button">
-              Añadir imagen
-            </button>
-            <input
-              type="file"
-              name=""
-              id="img-selector"
-              className="action__hiddenField js__profile-upload-btn"
-            />
-            <div className="profile__preview js__profile-preview"></div>
+          <InputComponent
+            labelTitle="Nombre completo"
+            icon="fas fa-asterisk"
+            htmlClass="box js-inputName"
+            type="text"
+            descriptionContent="name"
+            max="20"
+            placeholder="Ej: Jeanne Baret"
+            errorText="Introduce un nombre válido"
+          >
+          </InputComponent>
+          <InputComponent
+            labelTitle="Puesto"
+            icon="fas fa-asterisk"
+            htmlClass="box js-inputJob"
+            type="text"
+            descriptionContent="job"
+            max="20"
+            placeholder="Ej: Botánica"
+            errorText="Introduce una profesión válida"
+          >
+          </InputComponent>
 
-            <label className="label" htmlFor="email">
-              Email<i className="fas fa-asterisk" aria-hidden="true"></i>
-            </label>
-            <input
-              className="box js-inputEmail"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Ej: jeanne-baret@gmail.com"
-              required
-            />
-            <small className="js-error-message">
-              Introduce un email válido
-            </small>
-          </div>
-          <div className="form_control">
-            <label className="label" htmlFor="phone">
-              Teléfono
-            </label>
-            <input
-              className="box js-inputPhone"
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Ej: 915327899"
-            />
-            <small className="js-error-message">
-              Introduce un teléfono válido
-            </small>
-          </div>
-          <div className="form_control">
-            <label className="label" htmlFor="linkedin">
-              Linkedin<i className="fas fa-asterisk" aria-hidden="true"></i>
-            </label>
-            <input
-              className="box js-inputLinkedin"
-              type="text"
-              id="linkedin"
-              name="linkedin"
-              placeholder="Ej: JeanneBaret"
-              required
-            />
-            <small className="js-error-message">
-              Introduce tu nombre de Linkedin
-            </small>
-          </div>
-          <div className="form_control">
-            <label className="label" htmlFor="github">
-              Github<i className="fas fa-asterisk" aria-hidden="true"></i>
-            </label>
-            <input
-              className="box js-inputGithub"
-              type="text"
-              id="github"
-              name="github"
-              placeholder="Ej: JeanneBaret"
-              required
-            />
-            <small className="js-error-message">
-              Introduce tu nombre de Github
-            </small>
-          </div>
+          <ImageComponent />
+
+          <InputComponent
+            labelTitle="Email"
+            icon="fas fa-asterisk"
+            htmlClass="box js-inputEmail"
+            type="email"
+            descriptionContent="email"
+            max=""
+            placeholder="Ej: jeanne-baret@gmail.com"
+            errorText="Introduce un email válido"
+          >
+          </InputComponent>
+          <InputComponent
+            labelTitle="Teléfono"
+            icon=""
+            htmlClass="box js-inputPhone"
+            type="tel"
+            descriptionContent="phone"
+            max=""
+            placeholder="Ej: 915327899"
+            errorText="Introduce un teléfono válido"
+          >
+          </InputComponent>
+          <InputComponent
+            labelTitle="Linkedin"
+            icon="fas fa-asterisk"
+            htmlClass="box js-inputLinkedin"
+            type="text"
+            descriptionContent="linkedin"
+            max=""
+            placeholder="Ej: JeanneBaret"
+            errorText="Introduce un nombre de Linkedin"
+          >
+          </InputComponent>
+          <InputComponent
+            labelTitle="Github"
+            icon="fas fa-asterisk"
+            htmlClass="box js-inputGithub"
+            type="text"
+            descriptionContent="github"
+            max=""
+            placeholder="Ej: JeanneBaret"
+            errorText="Introduce un nombre de Github"
+          >
+          </InputComponent>
+
         </Collapsable>
       </div>
-    </fieldset>
+    </fieldset >
   );
 };
 
