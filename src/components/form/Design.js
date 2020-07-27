@@ -1,5 +1,6 @@
 import React from "react";
 import Collapsable from "./Collapsable";
+import PaletteComponent from "./PaletteComponent";
 
 const Design = (props) => {
   return (
@@ -26,50 +27,25 @@ const Design = (props) => {
               </li>
             </ul>
           </div>
-          <div className="design__container__options">
-            <label htmlFor="cold" className="cold">
-              <input
-                type="radio"
-                id="cold"
-                className="js-palette"
-                name="palette"
-                value="1"
-                defaultChecked
-              />
-              <div className="palette-cold">
-                <span className="a"></span>
-                <span className="b"></span>
-                <span className="c"></span>
-              </div>
-            </label>
-            <label htmlFor="warm" className="warm">
-              <input
-                id="warm"
-                type="radio"
-                className="js-palette"
-                name="palette"
-                value="2"
-              />
-              <div className="palette-warm">
-                <span className="a"></span>
-                <span className="b"></span>
-                <span className="c"></span>
-              </div>
-            </label>
-            <label forhtml="medium" className="medium">
-              <input
-                id="medium"
-                type="radio"
-                className="js-palette"
-                name="palette"
-                value="3"
-              />
-              <div className="palette-medium">
-                <span className="a"></span>
-                <span className="b"></span>
-                <span className="c"></span>
-              </div>
-            </label>
+ <div className="design__container__options">
+<PaletteComponent
+labelName= "cold"
+value= "1"
+palette="palette-cold">
+</PaletteComponent>
+
+<PaletteComponent
+labelName= "warm"
+value= "2"
+palette="palette-warm">
+</PaletteComponent>
+
+<PaletteComponent
+labelName= "medium"
+value= "3"
+palette="palette-medium"
+>
+</PaletteComponent>
           </div>
         </div>
         <div className="design__container__frame">
@@ -87,3 +63,9 @@ const Design = (props) => {
 };
 
 export default Design;
+
+
+{/* <flowerComponent
+flowerName="Gingko">
+
+</flowerComponent> */}
