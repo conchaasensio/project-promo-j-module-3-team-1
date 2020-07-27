@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main class="app__main">
-        <div class="wrapper">
+      <main className="app__main">
+        <div className="wrapper">
           <Preview />
           <Form />
         </div>

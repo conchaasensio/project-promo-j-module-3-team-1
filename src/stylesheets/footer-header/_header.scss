@@ -5,14 +5,13 @@
     padding-left: rem(40);
     padding-top: rem(30);
     padding-bottom: rem(30);
-  }
-
-  h1 {
-    font-size: $font-regular;
-    width: rem(201);
-    height: rem(20);
-    img {
-      width: 100%;
+    h1 {
+      font-size: $font-regular;
+      width: rem(201);
+      height: rem(51);
+      img {
+        width: 100%;
+      }
     }
   }
 }
