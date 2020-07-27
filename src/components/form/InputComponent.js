@@ -1,4 +1,5 @@
 import React from "react";
+// import PropTypes from 'prop-types';
 
 class InputComponent extends React.Component {
     constructor(props) {
@@ -33,5 +34,12 @@ class InputComponent extends React.Component {
         );
     }
 }
+
+{/* InputComponent.propTypes = {
+    labelTitle: PropTypes.string,
+    htmlClass: PropTypes.string,
+    descriptionContent: PropTypes.string,
+    max: PropTypes.number,
+} */}
 
 export default InputComponent;
