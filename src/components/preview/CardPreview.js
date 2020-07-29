@@ -10,7 +10,9 @@ const CardPreview = (props) => {
     <div className="app__preview--card">
       <div className="top-block">
         <div className="name_job js-border border-cold">
-          <h3 className="full_name js-name name-cold">{props.name}</h3>
+          <h3 className="full_name js-name name-cold">
+            {props.name || 'Jeanne Baret'}
+          </h3>
           <h4 className="job js-jobPreview">{props.job}</h4>
         </div>
       </div>
