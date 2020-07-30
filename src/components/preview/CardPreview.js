@@ -1,9 +1,9 @@
-import React from 'react';
-import '../../stylesheets/form/_form.scss';
-import '../../stylesheets/preview/_preview.scss';
-import '../../stylesheets/common/_page.scss';
-import '../../stylesheets/preview/_image_preview.scss';
-import SocialMediaButtons from './SocialMediaButtons';
+import React from "react";
+import "../../stylesheets/form/_form.scss";
+import "../../stylesheets/preview/_preview.scss";
+import "../../stylesheets/common/_page.scss";
+import "../../stylesheets/preview/_image_preview.scss";
+import SocialMediaButtons from "./SocialMediaButtons";
 
 const CardPreview = (props) => {
   return (
@@ -11,9 +11,9 @@ const CardPreview = (props) => {
       <div className="top-block">
         <div className="name_job js-border border-cold">
           <h3 className="full_name js-name name-cold">
-            {props.name || 'Jeanne Baret'}
+            {props.name || "Jeanne Baret"}
           </h3>
-          <h4 className="job js-jobPreview">{props.job}</h4>
+          <h4 className="job js-jobPreview">{props.job || "Botánica"}</h4>
         </div>
       </div>
       <div className="photo js-photo js-photo-default js__profile-image">

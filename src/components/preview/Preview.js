@@ -1,10 +1,10 @@
-import React from 'react';
-import '../../stylesheets/form/_form.scss';
-import '../../stylesheets/preview/_preview.scss';
-import '../../stylesheets/common/_page.scss';
-import '../../stylesheets/preview/_image_preview.scss';
-import CardPreview from './CardPreview';
-import ButtonReset from './Reset';
+import React from "react";
+import "../../stylesheets/form/_form.scss";
+import "../../stylesheets/preview/_preview.scss";
+import "../../stylesheets/common/_page.scss";
+import "../../stylesheets/preview/_image_preview.scss";
+import CardPreview from "./CardPreview";
+import ButtonReset from "./Reset";
 
 const Preview = (props) => {
   console.log(props);
@@ -13,7 +13,14 @@ const Preview = (props) => {
       <div className="button-container">
         <ButtonReset />
       </div>
-      <CardPreview name={props.name} job="Botánica" />
+      <CardPreview
+        name={props.name}
+        job={props.job}
+        email={props.email}
+        phone={props.phone}
+        linkedin={props.linkedin}
+        github={props.github}
+      />
     </section>
   );
 };

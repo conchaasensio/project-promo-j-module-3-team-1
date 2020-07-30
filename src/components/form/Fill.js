@@ -1,7 +1,7 @@
-import React from 'react';
-import Collapsable from './Collapsable';
-import ImageComponent from './ImageComponent';
-import InputComponent from './InputComponent';
+import React from "react";
+import Collapsable from "./Collapsable";
+import ImageComponent from "./ImageComponent";
+import InputComponent from "./InputComponent";
 
 const Fill = (props) => {
   console.log(props);
@@ -35,7 +35,8 @@ const Fill = (props) => {
             max="20"
             placeholder="Ej: Botánica"
             errorText="Introduce una profesión válida"
-            job={props.job}
+            handleInput={props.handleInput}
+            value={props.job}
           ></InputComponent>
 
           <ImageComponent />
