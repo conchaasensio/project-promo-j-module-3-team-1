@@ -7,7 +7,6 @@ import CardPreview from "./CardPreview";
 import ButtonReset from "./Reset";
 
 const Preview = (props) => {
-  console.log(props);
   return (
     <section className="app__preview">
       <div className="button-container">

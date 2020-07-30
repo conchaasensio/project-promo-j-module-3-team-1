@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 class InputComponent extends React.Component {
   constructor(props) {
@@ -7,12 +7,12 @@ class InputComponent extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange() {
+  handleChange(event) {
     const data = {
-      inputKey: '', //name, job, linked
-      inputValue: '',
+      inputKey: event.currentTarget.id, //name, job, linked
+      inputValue: event.currentTarget.value,
     };
-    this.props.handleInput(data);
+    this.props.handleInput(data, event);
   }
 
   render() {

@@ -13,15 +13,20 @@ function App() {
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
 
-  const handleInput = (data, event) => {
-    console.log("han cambiado algo", data);
-    const value = event.currentTarget.value;
-    const inputId = event.currentTarget.id;
-    console.log(value, inputId);
-
-    const newName
-    newName[inputId] = value;
-    setName(newName);
+  const handleInput = (data) => {
+    if (data.inputKey == "name") {
+      setName(data.inputValue);
+    } else if (data.inputKey == "job") {
+      setJob(data.inputValue);
+    } else if (data.inputKey == "email") {
+      setEmail(data.inputValue);
+    } else if (data.inputKey == "phone") {
+      setPhone(data.inputValue);
+    } else if (data.inputKey == "linkedin") {
+      setLinkedin(data.inputValue);
+    } else {
+      setGithub(data.inputValue);
+    }
   };
 
   return (

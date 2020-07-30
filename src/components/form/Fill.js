@@ -4,7 +4,6 @@ import ImageComponent from "./ImageComponent";
 import InputComponent from "./InputComponent";
 
 const Fill = (props) => {
-  console.log(props);
   return (
     <fieldset className="form__fill js-form__fill">
       <div className="border border__top">
@@ -50,6 +49,8 @@ const Fill = (props) => {
             max=""
             placeholder="Ej: jeanne-baret@gmail.com"
             errorText="Introduce un email válido"
+            handleInput={props.handleInput}
+            value={props.email}
           ></InputComponent>
           <InputComponent
             labelTitle="Teléfono"
@@ -60,6 +61,8 @@ const Fill = (props) => {
             max=""
             placeholder="Ej: 915327899"
             errorText="Introduce un teléfono válido"
+            handleInput={props.handleInput}
+            value={props.phone}
           ></InputComponent>
           <InputComponent
             labelTitle="Linkedin"
@@ -70,6 +73,8 @@ const Fill = (props) => {
             max=""
             placeholder="Ej: JeanneBaret"
             errorText="Introduce un nombre de Linkedin"
+            handleInput={props.handleInput}
+            value={props.linkedin}
           ></InputComponent>
           <InputComponent
             labelTitle="Github"
@@ -80,6 +85,8 @@ const Fill = (props) => {
             max=""
             placeholder="Ej: JeanneBaret"
             errorText="Introduce un nombre de Github"
+            handleInput={props.handleInput}
+            value={props.github}
           ></InputComponent>
         </Collapsable>
       </div>
