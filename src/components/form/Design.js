@@ -27,25 +27,24 @@ const Design = (props) => {
               </li>
             </ul>
           </div>
- <div className="design__container__options">
-<PaletteComponent
-labelName= "cold"
-value= "1"
-palette="palette-cold">
-</PaletteComponent>
+          <div className="design__container__options">
+            <PaletteComponent
+              labelName="cold"
+              value="1"
+              palette="palette-cold"
+            ></PaletteComponent>
 
-<PaletteComponent
-labelName= "warm"
-value= "2"
-palette="palette-warm">
-</PaletteComponent>
+            <PaletteComponent
+              labelName="warm"
+              value="2"
+              palette="palette-warm"
+            ></PaletteComponent>
 
-<PaletteComponent
-labelName= "medium"
-value= "3"
-palette="palette-medium"
->
-</PaletteComponent>
+            <PaletteComponent
+              labelName="medium"
+              value="3"
+              palette="palette-medium"
+            ></PaletteComponent>
           </div>
         </div>
         <div className="design__container__frame">
@@ -64,8 +63,9 @@ palette="palette-medium"
 
 export default Design;
 
-
-{/* <flowerComponent
+{
+  /* <flowerComponent
 flowerName="Gingko">
 
-</flowerComponent> */}
+</flowerComponent> */
+}

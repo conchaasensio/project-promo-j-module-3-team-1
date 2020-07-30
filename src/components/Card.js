@@ -12,20 +12,24 @@ function App() {
   const [phone, setPhone] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
+  const [palette, setPalette] = useState("1");
 
   const handleInput = (data) => {
-    if (data.inputKey == "name") {
+    if (data.inputKey === "name") {
       setName(data.inputValue);
-    } else if (data.inputKey == "job") {
+    } else if (data.inputKey === "job") {
       setJob(data.inputValue);
-    } else if (data.inputKey == "email") {
+    } else if (data.inputKey === "email") {
       setEmail(data.inputValue);
-    } else if (data.inputKey == "phone") {
+    } else if (data.inputKey === "phone") {
       setPhone(data.inputValue);
-    } else if (data.inputKey == "linkedin") {
+    } else if (data.inputKey === "linkedin") {
       setLinkedin(data.inputValue);
-    } else {
+    } else if (data.inputKey === "github") {
       setGithub(data.inputValue);
+    } else {
+      setPalette(data.inputValue);
+      console.log(setPalette(data.inputValue));
     }
   };
 
@@ -41,6 +45,7 @@ function App() {
             phone={phone}
             linkedin={linkedin}
             github={github}
+            palette={palette}
           />
 
           <Form
@@ -51,6 +56,7 @@ function App() {
             phone={phone}
             linkedin={linkedin}
             github={github}
+            palette={palette}
           />
         </div>
       </main>

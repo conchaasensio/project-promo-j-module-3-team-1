@@ -19,6 +19,7 @@ const Preview = (props) => {
         phone={props.phone}
         linkedin={props.linkedin}
         github={props.github}
+        palette={props.palette}
       />
     </section>
   );

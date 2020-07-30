@@ -5,6 +5,7 @@ import "../../stylesheets/common/_page.scss";
 import "../../stylesheets/preview/_image_preview.scss";
 import SocialMediaButtons from "./SocialMediaButtons";
 
+//TENEMOS QUE PONER {props.palette} EN LOS SITIOS QUE VAYA A CAMBIAR??
 const CardPreview = (props) => {
   return (
     <div className="app__preview--card">
