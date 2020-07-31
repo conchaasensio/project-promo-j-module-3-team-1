@@ -7,8 +7,15 @@ class PaletteComponent extends React.Component {
     this.value = this.props.value;
     this.palette = this.props.palette;
     // this.flowerName= this.props.flowerName;
+    this.handleChange = this.handleChange.bind(this);
   }
-
+  handleChange(event) {
+    const data = {
+      inputKey: "palette",
+      inputValue: event.currentTarget.value,
+    };
+    this.props.handleInput(data);
+  }
   render() {
     return (
       <>
@@ -19,7 +26,8 @@ class PaletteComponent extends React.Component {
             className="js-palette"
             name="palette"
             value={this.props.value}
-            defaultChecked
+            checked={this.props.currentPalette === this.props.value}
+            onChange={this.handleChange}
           />
           <div className={this.props.palette}>
             <span className="a"></span>

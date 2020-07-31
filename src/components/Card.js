@@ -27,9 +27,8 @@ function App() {
       setLinkedin(data.inputValue);
     } else if (data.inputKey === "github") {
       setGithub(data.inputValue);
-    } else {
+    } else if (data.inputKey === "palette") {
       setPalette(data.inputValue);
-      console.log(setPalette(data.inputValue));
     }
   };
 

@@ -32,18 +32,24 @@ const Design = (props) => {
               labelName="cold"
               value="1"
               palette="palette-cold"
+              currentPalette={props.palette}
+              handleInput={props.handleInput}
             ></PaletteComponent>
 
             <PaletteComponent
               labelName="warm"
               value="2"
               palette="palette-warm"
+              currentPalette={props.palette}
+              handleInput={props.handleInput}
             ></PaletteComponent>
 
             <PaletteComponent
               labelName="medium"
               value="3"
               palette="palette-medium"
+              currentPalette={props.palette}
+              handleInput={props.handleInput}
             ></PaletteComponent>
           </div>
         </div>

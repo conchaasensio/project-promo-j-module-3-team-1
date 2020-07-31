@@ -12,7 +12,7 @@ class InputComponent extends React.Component {
       inputKey: event.currentTarget.id, //name, job, linked
       inputValue: event.currentTarget.value,
     };
-    this.props.handleInput(data, event);
+    this.props.handleInput(data);
   }
 
   render() {

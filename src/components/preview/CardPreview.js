@@ -7,8 +7,16 @@ import SocialMediaButtons from "./SocialMediaButtons";
 
 //TENEMOS QUE PONER {props.palette} EN LOS SITIOS QUE VAYA A CAMBIAR??
 const CardPreview = (props) => {
+  let paletteClassName = "";
+  if (props.palette === "1") {
+    paletteClassName = "cold";
+  } else if (props.palette === "2") {
+    paletteClassName = "warm";
+  } else if (props.palette === "3") {
+    paletteClassName = "medium";
+  }
   return (
-    <div className="app__preview--card">
+    <div className={`app__preview--card palette-${paletteClassName}`}>
       <div className="top-block">
         <div className="name_job js-border border-cold">
           <h3 className="full_name js-name name-cold">
