@@ -68,8 +68,6 @@
       display: flex;
       margin-left: rem(20);
       padding: rem(10) 0 rem(12);
-      a {
-      }
       li {
         border-radius: 50%;
         width: rem(32);
@@ -87,13 +85,14 @@
 }
 
 .palette-cold{
-  .name-cold {
+  .name {
     color: $palette-cold-a;
   }
-  .border-cold {
+  .border {
     border-left: rem(5) solid $palette-cold-b;
+    border-bottom: 0px;
   }
-  .icon-cold {
+  .icon {
     li {
       border: $palette-cold-c rem(2) solid;
     }
@@ -103,15 +102,23 @@
       color: $palette-cold-a;
     }
   }
+  .photo{
+    background-image: url('../../images/Ginkgo.png');
+    .frame{
+      background-image: url('../../images/transparency_cold.png');
+    }
+  }
+  
 }
 .palette-warm{
-  .name-warm {
+  .name {
     color: $palette-warm-a;
   }
-  .border-warm {
+  .border {
     border-left: rem(5) solid $palette-warm-b;
+    border-bottom: 0px;
   }
-  .icon-warm {
+  .icon {
     li {
       border: $palette-warm-c rem(2) solid;
     }
@@ -121,15 +128,24 @@
       color: $palette-warm-a;
     }
   }
+  .photo{
+    background-image: url('../../images/Amapola.png');
+    .frame{
+      background-image: url('../../images/transparency_warm.png');
+      transform: scale(-1, 1);
+    }
+  }
+  
 }
 .palette-medium{
-  .name-medium {
+  .name {
     color: $palette-medium-a;
   }
-  .border-medium{
+  .border{
     border-left: rem(5) solid $palette-medium-b;
+    border-bottom: 0px;
   }
-  .icon-medium{
+  .icon{
     li {
       border: $palette-medium-c rem(2) solid;
     }
@@ -137,6 +153,13 @@
     .far,
     .fab {
       color: $palette-medium-a;
+    }
+  }
+  .photo{
+    background-image: url('../../images/Girasol.png');
+    .frame{
+      background-image: url('../../images/transparency_medium.png');
+      transform: rotate(deg) scale(-1, 1);
     }
   }
 }
@@ -148,36 +171,4 @@
   &-hidden {
     display: none;
   }
-
-  &-cold {
-    background-image: url('../../images/transparency_cold.png');
-  }
-  &-warm {
-    background-image: url('../../images/transparency_warm.png');
-    transform: scale(-1, 1);
-  }
-  &-medium {
-    background-image: url('../../images/transparency_medium.png');
-    transform: rotate(deg) scale(-1, 1);
-  }
-}
-
-.js-photo-default {
-  background-image: url('../../images/lila2.png');
-}
-
-.photo-warm {
-  background-image: url('../../images/Amapola.png');
-}
-
-.photo-cold {
-  background-image: url('../../images/Ginkgo.png');
-}
-
-.photo-medium {
-  background-image: url('../../images/Girasol.png');
-}
-
-.js-icon-deactivated {
-  opacity: 0.3;
 }

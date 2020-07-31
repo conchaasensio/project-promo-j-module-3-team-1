@@ -18,17 +18,17 @@ const CardPreview = (props) => {
   return (
     <div className={`app__preview--card palette-${paletteClassName}`}>
       <div className="top-block">
-        <div className="name_job js-border border-cold">
-          <h3 className="full_name js-name name-cold">
+        <div className="name_job js-border border">
+          <h3 className="full_name js-name name">
             {props.name || "Jeanne Baret"}
           </h3>
           <h4 className="job js-jobPreview">{props.job || "Botánica"}</h4>
         </div>
       </div>
       <div className="photo js-photo js-photo-default js__profile-image">
-        <div className="js-frame js-frame-cold js-frame-hidden"></div>
+        <div className="js-frame frame js-frame-hidden"></div>
       </div>
-      <ul className="social_media js-icon icon-cold">
+      <ul className="social_media js-icon icon">
         <SocialMediaButtons
           socialMediaButtonClass="js-emailPreview"
           socialMediaButtonLink="mailto:"
