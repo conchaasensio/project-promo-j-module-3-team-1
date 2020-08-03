@@ -1,6 +1,7 @@
-import React from "react";
-import "../stylesheets/landing/_main.scss";
-import LogoPagina from "../../images/logopagina.png";
+import React from 'react';
+import '../../stylesheets/landing/_main.scss';
+import { Link } from 'react-router-dom';
+import LogoPagina from '../../images/logopagina.png';
 
 const Main = (props) => {
   return (
@@ -27,13 +28,9 @@ const Main = (props) => {
             <p className="capitalize">comparte</p>
           </article>
         </div>
-        <a
-          href="./app.html"
-          title="Comenzar"
-          className="page__main--link uppercase"
-        >
+        <Link to="/card" className="page__main--link uppercase">
           comenzar
-        </a>
+        </Link>
       </div>
     </main>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../header-footer/Footer';
+import Footer from '../components/header-footer/Footer';
 import Main from './landing/Main';
 
 function Landing() {
