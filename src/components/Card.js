@@ -1,33 +1,33 @@
-import React, { useState } from "react";
-import Header from "./header-footer/Header";
-import Form from "./form/Form";
-import Footer from "./header-footer/Footer";
-import Preview from "./preview/Preview";
-import "../stylesheets/common/_app.scss";
+import React, { useState } from 'react';
+import Header from './header-footer/Header';
+import Form from './form/Form';
+import Footer from './header-footer/Footer';
+import Preview from './preview/Preview';
+import '../stylesheets/common/_app.scss';
 
-function App() {
-  const [name, setName] = useState("");
-  const [job, setJob] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [linkedin, setLinkedin] = useState("");
-  const [github, setGithub] = useState("");
-  const [palette, setPalette] = useState("1");
+function Card() {
+  const [name, setName] = useState('');
+  const [job, setJob] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [linkedin, setLinkedin] = useState('');
+  const [github, setGithub] = useState('');
+  const [palette, setPalette] = useState('1');
 
   const handleInput = (data) => {
-    if (data.inputKey === "name") {
+    if (data.inputKey === 'name') {
       setName(data.inputValue);
-    } else if (data.inputKey === "job") {
+    } else if (data.inputKey === 'job') {
       setJob(data.inputValue);
-    } else if (data.inputKey === "email") {
+    } else if (data.inputKey === 'email') {
       setEmail(data.inputValue);
-    } else if (data.inputKey === "phone") {
+    } else if (data.inputKey === 'phone') {
       setPhone(data.inputValue);
-    } else if (data.inputKey === "linkedin") {
+    } else if (data.inputKey === 'linkedin') {
       setLinkedin(data.inputValue);
-    } else if (data.inputKey === "github") {
+    } else if (data.inputKey === 'github') {
       setGithub(data.inputValue);
-    } else if (data.inputKey === "palette") {
+    } else if (data.inputKey === 'palette') {
       setPalette(data.inputValue);
     }
   };
@@ -64,4 +64,4 @@ function App() {
   );
 }
 
-export default App;
+export default Card;
