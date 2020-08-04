@@ -14,7 +14,6 @@ const Share = (props) => {
   const handleCreateCardClick = (event) => {
     event.preventDefault();
     getDataFromApi(props).then((resp) => {
-      console.log('YEPA', resp);
       setCardLink(resp.cardURL);
     });
   };
