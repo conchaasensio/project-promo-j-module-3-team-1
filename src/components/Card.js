@@ -12,6 +12,7 @@ function Card() {
   const [phone, setPhone] = useState('');
   const [linkedin, setLinkedin] = useState('');
   const [github, setGithub] = useState('');
+  const [photo, setPhoto] = useState('');
   const [palette, setPalette] = useState('1');
 
   const handleInput = (data) => {
@@ -29,6 +30,8 @@ function Card() {
       setGithub(data.inputValue);
     } else if (data.inputKey === 'palette') {
       setPalette(data.inputValue);
+    } else if (data.inputKey === 'photo') {
+      setPhoto(data.inputValue);
     }
   };
 
@@ -45,6 +48,7 @@ function Card() {
             linkedin={linkedin}
             github={github}
             palette={palette}
+            photo={photo}
           />
 
           <Form
@@ -56,6 +60,7 @@ function Card() {
             linkedin={linkedin}
             github={github}
             palette={palette}
+            photo={photo}
           />
         </div>
       </main>

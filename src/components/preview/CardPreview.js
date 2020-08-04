@@ -4,6 +4,7 @@ import '../../stylesheets/preview/_preview.scss';
 import '../../stylesheets/common/_page.scss';
 import '../../stylesheets/preview/_image_preview.scss';
 import SocialMediaButtons from './SocialMediaButtons';
+import Lila from '../../images/lila2.png';
 
 //TENEMOS QUE PONER {props.palette} EN LOS SITIOS QUE VAYA A CAMBIAR??
 const CardPreview = (props) => {
@@ -25,7 +26,14 @@ const CardPreview = (props) => {
           <h4 className="job js-jobPreview">{props.job || 'Botánica'}</h4>
         </div>
       </div>
-      <div className="photo js-photo js-photo-default js__profile-image">
+      <div
+        className="photo js-photo js-photo-default js__profile-image"
+        // style={{ backgroundImage: `url(${props.photo || ''})` }}
+      >
+        {/* <img
+          src={props.photo ? props.photo : ''}
+          className="photo js-photo js-photo-default js__profile-image"
+        ></img> */}
         <div className="js-frame frame js-frame-hidden"></div>
       </div>
       <ul className="social_media js-icon icon">
