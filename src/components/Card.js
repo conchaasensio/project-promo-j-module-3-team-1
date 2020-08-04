@@ -5,6 +5,7 @@ import Footer from './header-footer/Footer';
 import Preview from './preview/Preview';
 import '../stylesheets/common/_app.scss';
 
+
 function Card() {
   const [name, setName] = useState('');
   const [job, setJob] = useState('');
