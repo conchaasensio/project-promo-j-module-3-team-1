@@ -1,10 +1,28 @@
 import React from "react";
 import Collapsable from "./Collapsable";
+import getDataFromApi from "../../services/api";
 import "../../stylesheets/form/_form.scss";
 import "../../stylesheets/preview/_preview.scss";
 import "../../stylesheets/common/_page.scss";
 
 const Share = (props) => {
+  const handleCreateCardClick = (event) => {
+    event.preventDefault();
+    getDataFromApi();
+    console.log("handle");
+    console.log("res: ", getDataFromApi());
+  };
+
+  const isCrearTarjetaBtnDisabled = () =>
+    !props.name ||
+    !props.job ||
+    !props.email ||
+    !props.phone ||
+    !props.linkedin ||
+    !props.github ||
+    !props.palette ||
+    !props.photo;
+
   return (
     <fieldset className="form__share">
       <Collapsable
@@ -14,10 +32,11 @@ const Share = (props) => {
         classcontainer="form__share__button"
       >
         <button
+          onClick={handleCreateCardClick}
           className="form__share__submit border js-button-share"
           type="submit"
           value="Crear tarjeta"
-          disabled
+          disabled={isCrearTarjetaBtnDisabled()}
         >
           <i className="far fa-address-card"></i>Crear tarjeta
         </button>

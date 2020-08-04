@@ -9,10 +9,19 @@ import Share from "./Share";
 const Form = (props) => {
   return (
     <section className="page__form">
-      <form action="/signup" method="post" className="js-form">
+      <form method="post" className="js-form">
         <Design palette={props.palette} handleInput={props.handleInput} />
         <Fill handleInput={props.handleInput} />
-        <Share />
+        <Share
+          name={props.name}
+          job={props.job}
+          email={props.email}
+          phone={props.phone}
+          linkedin={props.linkedin}
+          github={props.github}
+          palette={props.palette}
+          photo={props.photo}
+        />
       </form>
     </section>
   );
