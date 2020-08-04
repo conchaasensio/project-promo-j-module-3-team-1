@@ -1,7 +1,7 @@
-import React from "react";
-import Collapsable from "./Collapsable";
-import ImageComponent from "./ImageComponent";
-import InputComponent from "./InputComponent";
+import React from 'react';
+import Collapsable from './Collapsable';
+import ImageComponent from './ImageComponent';
+import InputComponent from './InputComponent';
 
 const Fill = (props) => {
   return (
@@ -38,7 +38,7 @@ const Fill = (props) => {
             value={props.job}
           ></InputComponent>
 
-          <ImageComponent />
+          <ImageComponent handleInput={props.handleInput} value={props.photo} />
 
           <InputComponent
             labelTitle="Email"

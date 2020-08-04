@@ -1,33 +1,34 @@
-import React from "react";
+import React from 'react';
 
 class ImageComponent extends React.Component {
   constructor(props) {
     super(props);
 
     this.fr = new FileReader();
-    this.fileField = React.createRef();
+    this.myFileField = React.createRef();
+
+    this.handleFilePicker = this.handleFilePicker.bind(this);
+    this.uploadImage = this.uploadImage.bind(this);
     this.getImage = this.getImage.bind(this);
-    this.writeImage = this.writeImage.bind(this);
-    this.fakeFileClick = this.fakeFileClick.bind(this);
   }
 
-  getImage(event) {
-    event.preventDefault();
-    const myFile = event.currentTarget.files[0];
-    this.fr.addEventListener("load", this.writeImage);
+  handleFilePicker() {
+    this.myFileField.current.click();
+  }
+
+  uploadImage(e) {
+    const myFile = e.currentTarget.files[0];
+    this.fr.addEventListener('load', this.getImage);
     this.fr.readAsDataURL(myFile);
   }
 
-  writeImage() {
-    this.setState({
-      photo: this.fr.result,
-    });
-    //ACTUALIZAR AVATAR
-    this.fileField.current.value = "";
+  getImage() {
+    const image = { inputValue: this.fr.result, inputKey: 'photo' };
+    this.props.handleInput(image);
   }
 
-  fakeFileClick() {
-    this.fileField.current.click();
+  getPreview(isDefault, image) {
+    return !isDefault ? { backgroundImage: `url(${image})` } : {};
   }
 
   render() {
@@ -40,7 +41,7 @@ class ImageComponent extends React.Component {
         <button
           className="button js__profile-trigger"
           type="button"
-          onClick={this.fakeFileClick}
+          onClick={this.handleFilePicker}
         >
           Añadir imagen
         </button>
@@ -49,7 +50,8 @@ class ImageComponent extends React.Component {
           name=""
           id="img-selector"
           className={`${this.fileField} action__hiddenField`}
-          onChange={this.writeImage}
+          ref={this.myFileField}
+          onChange={this.uploadImage}
         />
         <div className="profile__preview js__profile-preview"></div>
       </>

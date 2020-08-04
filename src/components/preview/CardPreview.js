@@ -1,31 +1,39 @@
-import React from 'react';
-import '../../stylesheets/form/_form.scss';
-import '../../stylesheets/preview/_preview.scss';
-import '../../stylesheets/common/_page.scss';
-import '../../stylesheets/preview/_image_preview.scss';
-import SocialMediaButtons from './SocialMediaButtons';
+import React from "react";
+import "../../stylesheets/form/_form.scss";
+import "../../stylesheets/preview/_preview.scss";
+import "../../stylesheets/common/_page.scss";
+import "../../stylesheets/preview/_image_preview.scss";
+import SocialMediaButtons from "./SocialMediaButtons";
+import Lila from "../../images/lila2.png";
 
 //TENEMOS QUE PONER {props.palette} EN LOS SITIOS QUE VAYA A CAMBIAR??
 const CardPreview = (props) => {
-  let paletteClassName = '';
-  if (props.palette === '1') {
-    paletteClassName = 'cold';
-  } else if (props.palette === '2') {
-    paletteClassName = 'warm';
-  } else if (props.palette === '3') {
-    paletteClassName = 'medium';
+  let paletteClassName = "";
+  if (props.palette === "1") {
+    paletteClassName = "cold";
+  } else if (props.palette === "2") {
+    paletteClassName = "warm";
+  } else if (props.palette === "3") {
+    paletteClassName = "medium";
   }
   return (
     <div className={`app__preview--card palette-${paletteClassName}`}>
       <div className="top-block">
         <div className="name_job js-border border">
           <h3 className="full_name js-name name">
-            {props.name || 'Jeanne Baret'}
+            {props.name || "Jeanne Baret"}
           </h3>
-          <h4 className="job js-jobPreview">{props.job || 'Botánica'}</h4>
+          <h4 className="job js-jobPreview">{props.job || "Botánica"}</h4>
         </div>
       </div>
-      <div className="photo js-photo js-photo-default js__profile-image">
+      <div
+        className="photo js-photo js-photo-default js__profile-image"
+        // style={{ backgroundImage: `url(${props.photo || ''})` }}
+      >
+        {/* <img
+          src={props.photo ? props.photo : ''}
+          className="photo js-photo js-photo-default js__profile-image"
+        ></img> */}
         <div className="js-frame frame js-frame-hidden"></div>
       </div>
       <ul className="social_media js-icon icon">
