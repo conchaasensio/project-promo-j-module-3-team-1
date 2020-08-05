@@ -1,6 +1,6 @@
 import React from 'react';
 import '../stylesheets/common/_app.scss';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
 import Card from './Card';
 
