@@ -10,6 +10,7 @@ class ImageComponent extends React.Component {
     this.handleFilePicker = this.handleFilePicker.bind(this);
     this.uploadImage = this.uploadImage.bind(this);
     this.getImage = this.getImage.bind(this);
+    console.log(this.props);
   }
 
   handleFilePicker() {
@@ -53,7 +54,13 @@ class ImageComponent extends React.Component {
           ref={this.myFileField}
           onChange={this.uploadImage}
         />
-        <div className="profile__preview js__profile-preview"></div>
+        <div className="profile__preview js__profile-preview">
+          <img
+            className="photo-mini photo-component"
+            src={this.props.value}
+            alt=""
+          />
+        </div>
       </>
     );
   }

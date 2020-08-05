@@ -38,7 +38,11 @@ const Fill = (props) => {
             value={props.job}
           ></InputComponent>
 
-          <ImageComponent handleInput={props.handleInput} value={props.photo} />
+          <ImageComponent
+            handleInput={props.handleInput}
+            value={props.photo}
+        
+          />
 
           <InputComponent
             labelTitle="Email"
