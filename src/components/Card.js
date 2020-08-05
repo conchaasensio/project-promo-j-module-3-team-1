@@ -58,6 +58,14 @@ function Card() {
     setGithub('');
     setPalette('1');
     setPhoto('');
+    localStorage.removeItem('name');
+    localStorage.removeItem('job');
+    localStorage.removeItem('email');
+    localStorage.removeItem('phone');
+    localStorage.removeItem('linkedin');
+    localStorage.removeItem('github');
+    localStorage.removeItem('palette');
+    localStorage.removeItem('photo');
   };
 
   return (
@@ -94,11 +102,5 @@ function Card() {
     </div>
   );
 }
-
-Card.defaultProps = {
-  defaultName: 'Jeanne Baret',
-  defaultJob: 'Botánica',
-  defaultPalette: '1',
-};
 
 export default Card;
