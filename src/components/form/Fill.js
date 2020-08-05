@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Collapsable from './Collapsable';
 import ImageComponent from './ImageComponent';
 import InputComponent from './InputComponent';
@@ -38,7 +38,11 @@ const Fill = (props) => {
             value={props.job}
           ></InputComponent>
 
-          <ImageComponent handleInput={props.handleInput} value={props.photo} />
+          <ImageComponent
+            handleInput={props.handleInput}
+            value={props.photo}
+        
+          />
 
           <InputComponent
             labelTitle="Email"

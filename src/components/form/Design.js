@@ -1,6 +1,6 @@
-import React from "react";
-import Collapsable from "./Collapsable";
-import PaletteComponent from "./PaletteComponent";
+import React from 'react';
+import Collapsable from './Collapsable';
+import PaletteComponent from './PaletteComponent';
 
 const Design = (props) => {
   return (
@@ -53,7 +53,7 @@ const Design = (props) => {
             ></PaletteComponent>
           </div>
         </div>
-        <div className="design__container__frame">
+        {/* <div className="design__container__frame">
           <h3>Marco</h3>
           <div
             href="#"
@@ -61,7 +61,7 @@ const Design = (props) => {
           >
             <div className="design__container__button__round"></div>
           </div>
-        </div>
+        </div> */}
       </Collapsable>
     </fieldset>
   );

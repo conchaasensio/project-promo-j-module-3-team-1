@@ -10,6 +10,7 @@ class ImageComponent extends React.Component {
     this.handleFilePicker = this.handleFilePicker.bind(this);
     this.uploadImage = this.uploadImage.bind(this);
     this.getImage = this.getImage.bind(this);
+    console.log(this.props);
   }
 
   handleFilePicker() {
@@ -38,22 +39,30 @@ class ImageComponent extends React.Component {
           Imagen de perfil
           <i className="fas fa-asterisk" aria-hidden="true"></i>
         </label>
-        <button
-          className="button js__profile-trigger"
-          type="button"
-          onClick={this.handleFilePicker}
-        >
-          Añadir imagen
-        </button>
-        <input
-          type="file"
-          name=""
-          id="img-selector"
-          className={`${this.fileField} action__hiddenField`}
-          ref={this.myFileField}
-          onChange={this.uploadImage}
-        />
-        <div className="profile__preview js__profile-preview"></div>
+        <div className="image-container">
+          <button
+            className="button js__profile-trigger"
+            type="button"
+            onClick={this.handleFilePicker}
+          >
+            Añadir imagen
+          </button>
+          <input
+            type="file"
+            name=""
+            id="img-selector"
+            className={`${this.fileField} action__hiddenField`}
+            ref={this.myFileField}
+            onChange={this.uploadImage}
+          />
+          <div className="profile__preview js__profile-preview">
+            <img
+              className="photo-mini photo-component"
+              src={this.props.value}
+              alt=""
+            />
+          </div>
+        </div>
       </>
     );
   }
