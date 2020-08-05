@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Collapsable from './Collapsable';
 import ImageComponent from './ImageComponent';
 import InputComponent from './InputComponent';
