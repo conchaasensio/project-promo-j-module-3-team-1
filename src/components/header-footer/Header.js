@@ -1,16 +1,17 @@
-import React from "react";
+import React from 'react';
 //import '../stylesheets/App.scss';
-import "../../stylesheets/footer-header/_header.scss";
-import LogoPagina from "../../images/logopagina.png";
+import { Link } from 'react-router-dom';
+import '../../stylesheets/footer-header/_header.scss';
+import LogoPagina from '../../images/logopagina.png';
 
 const Header = (props) => {
   return (
     <header className="header">
       <div className="wrapper">
         <h1>
-          <a href="./index.html" tittle="Go to landing page">
+          <Link to="/" tittle="Go to landing page">
             <img className="bigEntrance" src={LogoPagina} alt="girasol" />
-          </a>
+          </Link>
         </h1>
       </div>
     </header>

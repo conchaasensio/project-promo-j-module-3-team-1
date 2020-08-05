@@ -62,14 +62,18 @@
       width: rem(240);
       background-size: cover;
       background-position: center;
+      .photo-component{
+        height: rem(200);
+        width: rem(240);
+        background-size: contain;
+        background-position: center;
+      }
     }
 
     .social_media {
       display: flex;
       margin-left: rem(20);
       padding: rem(10) 0 rem(12);
-      a {
-      }
       li {
         border-radius: 50%;
         width: rem(32);
@@ -86,62 +90,82 @@
   }
 }
 
-.border {
-  &-cold {
-    border-left: rem(5) solid $palette-cold-b;
-  }
-  &-warm {
-    border-left: rem(5) solid $palette-warm-b;
-  }
-  &-medium {
-    border-left: rem(5) solid $palette-medium-b;
-  }
-}
-
-.name {
-  &-cold {
+.palette-cold{
+  .name {
     color: $palette-cold-a;
   }
-  &-warm {
-    color: $palette-warm-a;
+  .border {
+    border-left: rem(5) solid $palette-cold-b;
+    border-bottom: 0px;
   }
-  &-medium {
-    color: $palette-medium-a;
-  }
-}
-
-.icon {
-  &-cold {
+  .icon {
     li {
       border: $palette-cold-c rem(2) solid;
     }
-
     .fas,
     .far,
     .fab {
       color: $palette-cold-a;
     }
   }
-  &-warm {
+  .photo{
+    background-image: url('../../images/Ginkgo.png');
+    .frame{
+      background-image: url('../../images/transparency_cold.png');
+    }
+  }
+  
+}
+.palette-warm{
+  .name {
+    color: $palette-warm-a;
+  }
+  .border {
+    border-left: rem(5) solid $palette-warm-b;
+    border-bottom: 0px;
+  }
+  .icon {
     li {
       border: $palette-warm-c rem(2) solid;
     }
-
     .fas,
     .far,
     .fab {
       color: $palette-warm-a;
     }
   }
-  &-medium {
+  .photo{
+    background-image: url('../../images/Amapola.png');
+    .frame{
+      background-image: url('../../images/transparency_warm.png');
+      transform: scale(-1, 1);
+    }
+  }
+  
+}
+.palette-medium{
+  .name {
+    color: $palette-medium-a;
+  }
+  .border{
+    border-left: rem(5) solid $palette-medium-b;
+    border-bottom: 0px;
+  }
+  .icon{
     li {
       border: $palette-medium-c rem(2) solid;
     }
-
     .fas,
     .far,
     .fab {
       color: $palette-medium-a;
+    }
+  }
+  .photo{
+    background-image: url('../../images/Girasol.png');
+    .frame{
+      background-image: url('../../images/transparency_medium.png');
+      transform: rotate(deg) scale(-1, 1);
     }
   }
 }
@@ -153,36 +177,4 @@
   &-hidden {
     display: none;
   }
-
-  &-cold {
-    background-image: url('../../images/transparency_cold.png');
-  }
-  &-warm {
-    background-image: url('../../images/transparency_warm.png');
-    transform: scale(-1, 1);
-  }
-  &-medium {
-    background-image: url('../../images/transparency_medium.png');
-    transform: rotate(deg) scale(-1, 1);
-  }
-}
-
-.js-photo-default {
-  background-image: url('../../images/lila2.png');
-}
-
-.photo-warm {
-  background-image: url('../../images/Amapola.png');
-}
-
-.photo-cold {
-  background-image: url('../../images/Ginkgo.png');
-}
-
-.photo-medium {
-  background-image: url('../../images/Girasol.png');
-}
-
-.js-icon-deactivated {
-  opacity: 0.3;
 }

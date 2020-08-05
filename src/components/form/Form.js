@@ -10,8 +10,8 @@ const Form = (props) => {
   return (
     <section className="page__form">
       <form action="/signup" method="post" className="js-form">
-        <Design />
-        <Fill />
+        <Design palette={props.palette} handleInput={props.handleInput} />
+        <Fill handleInput={props.handleInput} />
         <Share />
       </form>
     </section>

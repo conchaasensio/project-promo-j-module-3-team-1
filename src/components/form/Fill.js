@@ -1,7 +1,7 @@
-import React from "react";
-import Collapsable from "./Collapsable";
-import ImageComponent from "./ImageComponent";
-import InputComponent from "./InputComponent";
+import React from 'react';
+import Collapsable from './Collapsable';
+import ImageComponent from './ImageComponent';
+import InputComponent from './InputComponent';
 
 const Fill = (props) => {
   return (
@@ -22,8 +22,9 @@ const Fill = (props) => {
             max="20"
             placeholder="Ej: Jeanne Baret"
             errorText="Introduce un nombre válido"
-          >
-          </InputComponent>
+            handleInput={props.handleInput}
+            value={props.name}
+          ></InputComponent>
           <InputComponent
             labelTitle="Puesto"
             icon="fas fa-asterisk"
@@ -33,10 +34,11 @@ const Fill = (props) => {
             max="20"
             placeholder="Ej: Botánica"
             errorText="Introduce una profesión válida"
-          >
-          </InputComponent>
+            handleInput={props.handleInput}
+            value={props.job}
+          ></InputComponent>
 
-          <ImageComponent />
+          <ImageComponent handleInput={props.handleInput} value={props.photo} />
 
           <InputComponent
             labelTitle="Email"
@@ -47,8 +49,9 @@ const Fill = (props) => {
             max=""
             placeholder="Ej: jeanne-baret@gmail.com"
             errorText="Introduce un email válido"
-          >
-          </InputComponent>
+            handleInput={props.handleInput}
+            value={props.email}
+          ></InputComponent>
           <InputComponent
             labelTitle="Teléfono"
             icon=""
@@ -58,8 +61,9 @@ const Fill = (props) => {
             max=""
             placeholder="Ej: 915327899"
             errorText="Introduce un teléfono válido"
-          >
-          </InputComponent>
+            handleInput={props.handleInput}
+            value={props.phone}
+          ></InputComponent>
           <InputComponent
             labelTitle="Linkedin"
             icon="fas fa-asterisk"
@@ -69,8 +73,9 @@ const Fill = (props) => {
             max=""
             placeholder="Ej: JeanneBaret"
             errorText="Introduce un nombre de Linkedin"
-          >
-          </InputComponent>
+            handleInput={props.handleInput}
+            value={props.linkedin}
+          ></InputComponent>
           <InputComponent
             labelTitle="Github"
             icon="fas fa-asterisk"
@@ -80,12 +85,12 @@ const Fill = (props) => {
             max=""
             placeholder="Ej: JeanneBaret"
             errorText="Introduce un nombre de Github"
-          >
-          </InputComponent>
-
+            handleInput={props.handleInput}
+            value={props.github}
+          ></InputComponent>
         </Collapsable>
       </div>
-    </fieldset >
+    </fieldset>
   );
 };
 

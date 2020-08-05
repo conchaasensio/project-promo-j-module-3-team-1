@@ -10,9 +10,18 @@ const Preview = (props) => {
   return (
     <section className="app__preview">
       <div className="button-container">
-        <ButtonReset />
+        <ButtonReset resetCard={props.resetCard} />
       </div>
-      <CardPreview name="Jeanne Baret" job="Botánica" />
+      <CardPreview
+        name={props.name}
+        job={props.job}
+        email={props.email}
+        phone={props.phone}
+        linkedin={props.linkedin}
+        github={props.github}
+        palette={props.palette}
+        photo={props.photo}
+      />
     </section>
   );
 };

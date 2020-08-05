@@ -1,8 +1,8 @@
-import React from "react";
-import Footer from "../header-footer/Footer";
-import Main from "./landing/Main";
+import React from 'react';
+import Footer from '../components/header-footer/Footer';
+import Main from './landing/Main';
 
-function App() {
+function Landing() {
   return (
     <div className="App">
       <Main />
@@ -11,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default Landing;
